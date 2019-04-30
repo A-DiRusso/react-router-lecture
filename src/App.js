@@ -12,7 +12,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       
+      <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/cats">Cats</Link>
+        
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About} />
         <Route path="/cats" component={Cats} />
