@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
+// import Home from '../Home';
+// import About from '../About';
+// import Cats from '../Cats';
 
 ReactDOM.render(<Router><App /></Router>, document.getElementById('root'));
 
