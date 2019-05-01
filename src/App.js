@@ -5,6 +5,7 @@ import About from './About';
 import Cats from './Cats';
 import PageNotFound from './PageNotFound';
 import Header from './Header';
+import Cat from './Cat';
 
 import {
   Link,
@@ -29,6 +30,7 @@ function App() {
        
         <Route component={PageNotFound} />
       </Switch>  
+        <Route path="/cats/:cat" component={Cat} />
       </header>
     </div>
   );
