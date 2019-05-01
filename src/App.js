@@ -16,7 +16,16 @@ import {
   
   //Functions are 'callable' objects
   //One of their methods is .bind
-  //.bind returns a new copy of the function, with the value of 'this' locked in.
+  //.bind returns a new copy of the function, 
+  // with the value of 'this' locked in.
+
+  // componentDidMount() {
+    //Earlier alternative syntax did not give you a copy of the function,
+    //It ran the function
+    // this._incrementCount.apply(this); - these are two older methods that would 
+    // this._incrementCount.call(this); - have the functions fireing right on load
+
+  // }
 
 class App extends React.Component {
   constructor(props) {
