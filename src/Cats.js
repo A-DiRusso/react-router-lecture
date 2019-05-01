@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const arrayOfCats = [
-  'oakley',
-  'milla',
-  'angela',
-  'chris'
-];
+// const arrayOfCats = [
+//   'oakley',
+//   'milla',
+//   'angela',
+//   'chris'
+// ];
 
-export default function Cats({match, history}) {
-  
-  const catLinks = arrayOfCats.map((catName, i) => (
+export default function Cats({cats, match, history}) {
+  console.log(cats);
+  const catLinks = cats.map((catName, i) => (
     <li>
       <Link to={`${match.path}/${catName}`} key={i}>{catName}</Link>
     </li>
