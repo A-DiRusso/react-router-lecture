@@ -12,12 +12,18 @@ import {
   // - a way to make sure that a method knows who this is
   // why do I need bind?
   //why do I bind?
+  
+  
+  //Functions are 'callable' objects
+  //One of their methods is .bind
+  //.bind returns a new copy of the function, with the value of 'this' locked in.
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: 0
+      counter: 0,
+      arrowCounter: 0
     }
     //in this spot where you def have access to the instance
     //.bind will lock-in the value of this
@@ -29,7 +35,7 @@ class App extends React.Component {
         <header className="App-header">
         <h2>{this.state.counter}</h2>
         <button onClick={this._incrementCount}>increment</button>
-        <h2>{this.state.counter}</h2>
+        <h2>{this.state.arrowCounter}</h2>
         <button onClick={this._incrementCountUsingArrow}>increment with Arrow</button>
         <Link to="/">Home</Link>
           <Link to="/about">About</Link>
@@ -57,7 +63,7 @@ class App extends React.Component {
   _incrementCountUsingArrow = () => {
     console.log("Arrow Fuction")
     this.setState({
-      counter: this.state.counter + 1
+      arrowCounter: this.state.counter + 1
     })
   }
 }
