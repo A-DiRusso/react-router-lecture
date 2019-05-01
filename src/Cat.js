@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Cat(props) {
+function Cat({match}) {
     return(
-        <div>Meow.</div>
+        <div>Meow, {match.params.cat}.</div>
     );
 }
 
