@@ -4,6 +4,8 @@ import Home from './Home';
 import About from './About';
 import Cats from './Cats';
 import PageNotFound from './PageNotFound';
+import Header from './Header';
+
 import {
   Link,
   Route,
@@ -14,7 +16,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Link to="/">Home</Link>
+        <Header />
+        <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/cats">Cats</Link>
         <Link to="knowhere">This Goes Nowhere</Link>
